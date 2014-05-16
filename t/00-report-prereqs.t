@@ -50,9 +50,13 @@ my $static_prereqs = do { my $x = {
                       },
        'runtime' => {
                       'requires' => {
+                                      'File::Find' => '0',
+                                      'IO::All' => '0',
+                                      'Linux::Inotify2' => '0',
+                                      'List::AllUtils' => '0',
                                       'Mojo::Base' => '0',
                                       'Nour::Config' => '0',
-                                      'perl' => '5.006'
+                                      'perl' => '5.010'
                                     }
                     },
        'test' => {
@@ -69,7 +73,7 @@ my $static_prereqs = do { my $x = {
                                    'IPC::Open3' => '0',
                                    'List::Util' => '0',
                                    'Test::More' => '0',
-                                   'perl' => '5.006',
+                                   'perl' => '5.010',
                                    'strict' => '0',
                                    'version' => '0',
                                    'warnings' => '0'

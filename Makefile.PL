@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use 5.006;
+use 5.010;
 
 use ExtUtils::MakeMaker 6.30;
 
@@ -21,6 +21,10 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "Mojolicious::Plugin::Nour::Config",
   "PREREQ_PM" => {
+    "File::Find" => 0,
+    "IO::All" => 0,
+    "Linux::Inotify2" => 0,
+    "List::AllUtils" => 0,
     "Mojo::Base" => 0,
     "Nour::Config" => 0
   },
@@ -37,7 +41,7 @@ my %WriteMakefileArgs = (
     "version" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.08",
+  "VERSION" => "0.09",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -46,11 +50,15 @@ my %WriteMakefileArgs = (
 
 my %FallbackPrereqs = (
   "ExtUtils::MakeMaker" => 0,
+  "File::Find" => 0,
   "File::Spec" => 0,
   "File::Spec::Functions" => 0,
   "File::Temp" => 0,
+  "IO::All" => 0,
   "IO::Handle" => 0,
   "IPC::Open3" => 0,
+  "Linux::Inotify2" => 0,
+  "List::AllUtils" => 0,
   "List::Util" => 0,
   "Mojo::Base" => 0,
   "Nour::Config" => 0,

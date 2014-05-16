@@ -11,7 +11,7 @@ build_requires:
   IPC::Open3: '0'
   List::Util: '0'
   Test::More: '0'
-  perl: '5.006'
+  perl: '5.010'
   strict: '0'
   version: '0'
   warnings: '0'
@@ -32,16 +32,20 @@ no_index:
 provides:
   Mojolicious::Plugin::Nour::Config:
     file: lib/Mojolicious/Plugin/Nour/Config.pm
-    version: '0.08'
+    version: '0.09'
 requires:
+  File::Find: '0'
+  IO::All: '0'
+  Linux::Inotify2: '0'
+  List::AllUtils: '0'
   Mojo::Base: '0'
   Nour::Config: '0'
-  perl: '5.006'
+  perl: '5.010'
 resources:
   bugtracker: https://github.com/sharabash/mojolicious-plugin-nour-config/issues
   homepage: https://metacpan.org/release/Mojolicious-Plugin-Nour-Config
   repository: git://github.com/sharabash/mojolicious-plugin-nour-config.git
-version: '0.08'
+version: '0.09'
 x_authority: cpan:AMIRITE
 x_contributors:
   - 'Nour Sharabash <nour.sharabash@gmail.com>'
